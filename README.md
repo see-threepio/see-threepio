@@ -7,7 +7,7 @@ see-threepio is a powerful, platform-agnostic solution to language localisation 
 * imports - external sources (outside of file) i.e FQDN, local file
 
 ## Term
-An expression...
+All 'terms' are essentially functions with 0 - N named parameters.
 
 ## Imports
 Translations can be built up from any number of sources via imports.  The expression
@@ -31,9 +31,6 @@ An example import tree with import precedence for overlapping terms:
         -> zh_HK imports:[zh]
             precedence:[zh, application, base]
 
-All 'terms' are essentially functions with 0 - N named parameters.
-
-
 
 ## Example format
 
@@ -42,8 +39,8 @@ All 'terms' are essentially functions with 0 - N named parameters.
             "http://somecdn.org/somelanguage.json"
         ],
         "terms":{
-            "anErrorOccurred": "An error ~itemsInCart({count}) occurred",
-            "itemsInCart(n)": "You have {count} ~pluralise({item}|{count}) in your cart",
-            "pluralise(word|count)": "{word}|~if(~=({number}|1)|s))"
+            "anErrorOccurred": "An error occurred",
+            "itemsInCart(n)": "You have {count} ~pluralise(item|{count}) in your cart",
+            "pluralise(word|number)": "{word}|~if(~=({number}|1)|s))"
         }
     }
