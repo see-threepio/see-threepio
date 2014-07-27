@@ -40,7 +40,7 @@ An example import tree with import precedence for overlapping terms:
         ],
         "terms":{
             "anErrorOccurred": "An error occurred",
-            "itemsInCart(n)": "You have {count} ~pluralise(item|{count}) in your cart",
+            "itemsInCart(count)": "You have {count} ~pluralise(item|{count}) in your cart",
             "pluralise(word|number)": "{word}|~if(~=({number}|1)|s))"
         }
     }
