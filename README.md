@@ -28,7 +28,7 @@ All 'terms' are essentially functions with 0 - N named parameters.
     {
         "anErrorOccurred": "An error occurred",
         "itemsInCart(count)": "You have {count} ~pluralise(item|{count}) in your cart",
-        "pluralise(word|number)": "{word}|~?(~=({number}|1)||s))"
+        "pluralise(word|count)": "{word}~?(~!=({count}|1)|s)"
     }
 
 ## The expression format
@@ -66,6 +66,6 @@ These terms use other terms:
 These terms call shipped functions, and complex terms:
 
     {
-        "pluralize(word|count)": "{word}~?(~=({count}|1)||s)",
-        "apples":"~pluralize(apples)"
+        "pluralize(word|count)": "{word}~?(~!=({count}|1)|s)",
+        "apples(count)":"~pluralize(apple|{count})"
     }
