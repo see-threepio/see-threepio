@@ -28,7 +28,7 @@ All 'terms' are essentially functions with 0 - N named parameters.
     {
         "anErrorOccurred": "An error occurred",
         "itemsInCart(count)": "You have {count} ~pluralise(item|{count}) in your cart",
-        "pluralise(word|number)": "{word}|~?(~=({number}|1)|s))"
+        "pluralise(word|number)": "{word}|~?(~=({number}|1)||s))"
     }
 
 ## The expression format
